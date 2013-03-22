@@ -1,315 +1,491 @@
 <!doctype html>  
 <html lang="en">
-	
-	<head>
-		<meta charset="utf-8">
-		
-		<title>reveal.js - The HTML Presentation Framework</title>
-
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
-
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-		
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/theme/default.css">
-
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<script>
-			// If the query includes 'print-pdf' we'll use the PDF print sheet
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-	
-	<body>
-		
-		<div class="reveal">
-
-			<!-- Used to fade in a background when a specific slide state is reached -->
-			<div class="state-background"></div>
-			
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-				</section>
-				
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with 
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-					<p>
-						<i><small>- <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small></i>
-					</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
-				</section>
-				
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#/2/1">down</a>.
-						</p>
-						<a href="#/2/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Holistic Overview</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview!
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-				
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section data-markdown>
-					## Markdown support
-					
-					For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-					<pre><code contenteditable style="margin-top: 20px;">&lt;section data-markdown&gt;
-  ## Markdown support
-
-  For those of you who like that sort of thing. 
-  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-&lt;/section&gt;
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like:
-					</p>
-					<ul>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=cube">Cube</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=page">Page</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=concave">Concave</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=linear">Linear</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<section data-state="alert">
-						<h2>Global State</h2>
-						<p>
-							Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-							will be added as a class to the document element when the slide is open. This lets you
-							apply broader style changes, like switching the background.
-						</p>
-						<a href="#/7/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-state="blackout">
-						<h2>"blackout"</h2>
-						<a href="#/7/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-state="soothe">
-						<h2>"soothe"</h2>
-						<a href="#/7/0" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would 
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-					</blockquote>
-				</section>
-				
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
     
-    var nodes = document.querySelectorAll( selector );
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Angular JS — An introduction</title>
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
 
-      if( !node.className ) ) {
-        node.className += ' roll';
-      }
-    };
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-				
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/theme/default.css">
 
-				<section>
-					<h2>Fragmented Views</h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment">... to step through ...</p>
-					<ol>
-						<li class="fragment"><code>any type</code></li>
-						<li class="fragment"><em>of view</em></li>
-						<li class="fragment"><strong>fragments</strong></li>
-					</ol>
-				</section>
-				
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://hakim.se/experiments/html5/breakdom/" target="_blank">
-						<img width="320" height="412" src="https://s3.amazonaws.com/hakim-static/reveal-js/breakdom.png" alt="BreakDOM game screenshot">
-					</a>
-				</section>
-				
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
-				
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on github</a></li>
-						<li><a href="http://hakim.se/projects/reveal-js">Read more on my site</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
-				
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
-				</section>
-			</div>
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
 
-			<!-- The navigational controls UI -->
-			<aside class="controls">
-				<a class="left" href="#">&#x25C4;</a>
-				<a class="right" href="#">&#x25BA;</a>
-				<a class="up" href="#">&#x25B2;</a>
-				<a class="down" href="#">&#x25BC;</a>
-			</aside>
+        <script>
+            // If the query includes 'print-pdf' we'll use the PDF print sheet
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
 
-			<!-- Presentation progress bar -->
-			<div class="progress"><span></span></div>
-			
-		</div>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body>
+        
+        <div class="reveal">
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+            <!-- Used to fade in a background when a specific slide state is reached -->
+            <div class="state-background"></div>
+            
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>My talk title</h1>
+                    <h3>Has nothing to do with the content</h3>
+                </section>
+                
+                <section>
+                    <h1>Hacking hackers for fun and profit</h1>
+                    <h3>Quick introduction to AngularJS</h3>
+                    <h4>Ruiwen Chua, @ruiwen</h4>
+                </section>
 
-		<script>
-			
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+                <section>
+                    <h1>AngularJS</h1>
+                    <p>
+                        The superheroic Javascript framework.
+                    </p>
+                    <p>
+                        <i><small>thorium-shielding, eggplant-teleportation, canine-psychokinesis</small></i>
+                    </p>
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
-					{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
-				]
-			});
-			
-		</script>
+                    <aside class="notes">
+                        Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
+                    </aside>
+                </section>
+                
 
-	</body>
+                <!-- MVC -->
+                <section>
+                    <section>
+                        <h1>MVC</h1>
+                        <h3>Models / Views / Controllers</h3>
+                    </section>
+
+                    <section>
+                        <h2>Resources</h2>
+                        <pre><code contenteditable>
+
+        var User = $resource('/api/users/', {id: '@objectId'});
+
+                        </code></pre>
+
+                        <pre><code contenteditable>
+        // Default methods
+        { 
+            'get':    {method:'GET'},
+            'save':   {method:'POST'},
+            'query':  {method:'GET', isArray:true},
+            'remove': {method:'DELETE'},
+            'delete': {method:'DELETE'} 
+        };
+                        </code></pre>
+                        <p><i>... and more!</i></p>
+                    </section>
+
+                    <section>
+                        <h2>Resources</h2>
+                        <pre><code contenteditable>
+
+...
+User.prototype.isHacker = function() { return this.is_hacker; }
+User.prototype.hackStuff = function(p) { this.current = p; }
+...
+
+                        </code></pre>
+                    </section>
+
+
+                    <section>
+                        <h2>HTML</h2>
+                        <pre><code contenteditable>
+
+        &lt;div ng-controller="ItemsController"&gt;
+            &lt;p&gt;Total items: {{ number_of_items}}&lt;p&gt;
+            &lt;ul&gt;
+                &lt;li ng-repeat="i in items"&gt;
+                    &lt;h1&gt;{{ i.name }}&lt;/h1&gt;
+                    &lt;p&gt;{{ i.desc }}&lt;/p&gt;
+                    &lt;p&gt;{{ i.amount }}&lt;/p&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;div&gt;
+
+                        </code></pre>
+                        <p>I prefer my templates in HTML, not Javascript, thank you.</p>
+                    </section>
+
+
+                    <section>
+                        <h2>Controllers</h2>
+                        <pre><code contenteditable>
+
+    function ItemController($rootScope, $scope, Item) {
+
+        $scope.user = $rootScope.user;
+        $scope.items = Item.query(function success(data) {
+
+            // Summarise items
+            $rootScope.user.summarise(data);
+        });
+
+        $scope.itemCount = function() {
+            $scope.number_of_items = $scope.items.length;
+        }
+
+    }
+    HomeController.$inject = ['$rootScope', '$scope', 'User'];
+
+                        </code></pre>
+                        <p>It's all about the $scope</p>
+                    </section>
+                </section>
+
+                <!-- Basic stucture -->
+                <section>
+                    <section>
+                        <h1>The Basics</h1>
+                    </section>
+                    <section>
+                        <h2>Getting started</h2>
+                        <pre><code contenteditable>
+
+    &lt;html ng-app="HackerApp"&gt;
+        ...
+        &lt;div ng-controller="AwesomeHackerCtrl"&gt;...&lt;/div&gt;
+        &lt;div ng-controller="SuperHackerCtrl"&gt;...&lt;/div&gt;
+    &lt;/html&gt;
+
+
+                        </code></pre>
+                        <p>Angular is happy to live within its own scope</p>
+                    </section>
+
+                    <section>
+                        <h2>ng-app</h2>
+                        <pre><code contenteditable>
+
+var HA = angular.module('HackerApp', ['models']).
+                config(function($interpolateProvider) {
+        $interpolateProvider.startSymbol('{!');
+        $interpolateProvider.endSymbol('!}');
+    });
+
+// Configure custom template markers
+HA.config(function($httpProvider) {
+    $httpProvider.defaults.headers.
+            common['X-Hacker'] = "w3H@xX0rz";
+})
+
+// Configure app initialisation 
+HA.run(function($window, $rootScope, $location, User){
+
+    // Check if we have a user in store
+    if($rootScope.user.isLoggedIn()) { ... }
+});
+
+                        </code></pre>
+                        <p>Global config and setup</p>
+                    </section>
+
+                    <section>
+                        <h2>ng-controller</h2>
+                        <pre><code contenteditable>
+
+    // Awesome Hackers
+    function AHCtrl($window, $rootScope, $scope, $http, Hacker) {
+
+        $scope.hackers = Hacker.query(function(data) {
+            // Validate each hacker
+        });
+
+        $scope.validateHacker = function(h) {
+            // Determine if awesome hacker
+        };
+    }
+    AHCtrl.$inject = ['$window', '$rootScope', '$scope', '$http', 'Hacker'];
+
+                        </code></pre>
+                        <p>Scoped local methods</p>
+                    </section>
+
+                    <section>
+                        <h2>Services</h2>
+
+                        <pre><code contenteditable>
+
+    angular.module('models', ['ngResource', 'ngCookies']).
+    factory('Hacker', function($resource) {
+
+        var Hacker = $resource("/api/hacker/:id", {id: "@id"})
+
+        // Add class methods
+        Hacker.login = function(data, success, error) {
+            $http.post('/api/login/', data).
+                success(success).
+                error(error);
+        });
+
+                        </code></pre>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Routing</h1>
+                    </section>
+
+                    <section>
+                        <h2>ng-view</h2>
+                        <pre><code contenteditable>
+
+    &lt;html ng-app="HackerApp"&gt;
+        ...
+        &lt;div ng-view&gt;&lt;/div&gt;
+    &lt;/html&gt;
+
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>The Router</h2>
+                        <pre><code contenteditable>
+
+// Configure routes
+HA.config(function($routeProvider, $locationProvider) {
+    $routeProvider.
+        when('/s/', {controller: SHCtrl, templateUrl: '/static/sh.html'}).
+        when('/a/', {controller: AHCtrl, templateUrl: '/static/ah.html'}).
+        otherwise({redirectTo: '/'});
+
+    // Set HTML5 Mode for routes
+    $locationProvider.html5Mode(true);
+});
+
+                        </code></pre>
+                    </section>
+
+                </section>
+
+                <!-- Promises -->
+                <section>
+                    <section>
+                        <h1>Promises</h1>
+                    </section>
+
+                    <section>
+                        <h2>CB March of Doom</h2>
+                        <pre><code contenteditable>
+
+    var results = doThis(function(data) {
+        doThat(data, function(data2) {
+            mungeNumbers(data2, function(data3) {
+                hideTracks(data3, function(data4) {
+                    boostProfits(data4, function(data5) {
+                        // On, and on, and on and on...
+                    })
+                })
+            })
+        })
+    })
+
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>The Promise</h2>
+                        <blockquote cite="http://wiki.commonjs.org/wiki/Promises">
+                            The CommonJS Promise proposal describes a promise as an interface for interacting with an object that represents the result of an action that is performed asynchronously, and may or may not be finished at any given point in time.
+                        </blockquote>
+                    </section>
+
+                    <section>
+                        <h2>The "Promise"</h2>
+                        <img src="img/men_promise.png" />
+                    </section>
+
+                    <section>
+                        <h2>The Promise</h2>
+                        <pre><code contenteditable>
+    angular.module('parse_backend', ['ngResource']).
+    config(function($httpProvider) {
+        $httpProvider.responseInterceptors.push(function($q) {
+            return function(promise) {
+                return promise.then(
+                    function(response) { // Success
+                        // Boost profits
+                        response.data['numbers'] += Math.pow(10, 6); 
+                    },
+                    function(response) { // Error
+
+                        return $q.reject(response);
+                    }
+                )
+            }
+        });
+    }).
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>The Promise</h2>
+                        <pre><code contenteditable>
+
+    var chores = 
+        $http.get('/husband/', { params: {clean: 'kitchen'}}).
+            
+            then(function(promise_d) { // Success
+                if(promise_d.data.tv_hours >= 5) {
+                    // Clean
+                }
+                else {
+                    return $q.defer("Not yet");
+                }
+            },
+            function(promise_d) { // Error
+                // No clean 
+            });
+
+                        </code></pre>
+                        <p>Annndd .then(). Annnnnnd .then(). And .then() and .then()</p>
+                    </section>
+                </section>
+
+                <!-- Gotchas -->
+                <section>
+                    <section>
+                        <h1>Gotchas</h1>
+                        <h3>(Or: things you wish they told you)</h3>
+                    </section>
+
+                    <section>
+                        <h2>$resource</h2>
+                        <p>Distributed separately</p>
+                    </section>
+
+                    <section>
+                        <h2>$cookies</h2>
+                        <p>Also distributed separately</p>
+                    </section>
+
+                    <section>
+                        <h2>Therefore</h2>
+                        <pre><code contenteditable>
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.js"&gt;&lt;/script&gt;
+&lt;script src="http://code.angularjs.org/angular-resource-1.0.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="http://code.angularjs.org/1.0.1/angular-cookies-1.0.1.min.js"&gt;&lt;/script&gt;
+
+                        </code></pre>
+                        <img class="fragment" src="img/why.jpg" /> 
+                    </section>
+
+                    <section>
+                        <h2>AngularJS is friendly</h2>
+                        <p>But it chooses its friends carefully</p>
+                    </section>
+                </section>
+
+
+                <!-- Plug -->
+                <section>
+                    <section>
+                        <h1>&lt;plug type="shameless"&gt;</h1>
+                    </section>
+
+                    <section>
+                        <h2>HackDo</h2>
+                        <img src="img/hsg_banner.png">
+                        <p><a href="http://hackerspace.sg">Hackerspace.SG</a>'s Get Shit Done Hackathon</p>
+                        <p>1 Sept 2012 12pm - 2 Sept 2012 7pm</p>
+                        <p><a href="https://www.facebook.com/events/333133036776477/">Sign Up Here</a></p>
+                    </section>
+
+                    <section>
+                        <h2>HackDo</h2>
+                        <img src="img/hsg_banner.png">
+                        <ul>
+                            <li>online membership management system (also called <a href="https://github.com/hackerspacesg/hackdo">HackDo</a>)</li>
+                            <li>hardware hacking on door access system</li>
+                            <li>environmental hacking (making sure the space remains awesome)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>HackDo</h2>
+                        <img src="img/hsg_banner.png">
+                        <ul>
+                            <li>Built on Django (and pink ponies)</li>
+                            <li>Customised admin interface for recording and reporting</li>
+                            <li>Needs: reporting, invoice generation, user management</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h1>&lt;/plug&gt;
+                    </section> 
+
+                </section>
+
+                <!-- Thanks QnA -->
+                <section>
+                    <h1>Thank you</h1>
+                    <h3>Questions?</h3>
+                    <h4>@ruiwen</h4>
+                </section>
+
+            </div>
+
+            <!-- The navigational controls UI -->
+            <aside class="controls">
+                <a class="left" href="#">&#x25C4;</a>
+                <a class="right" href="#">&#x25BA;</a>
+                <a class="up" href="#">&#x25B2;</a>
+                <a class="down" href="#">&#x25BC;</a>
+            </aside>
+
+            <!-- Presentation progress bar -->
+            <div class="progress"><span></span></div>
+            
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+            
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+                    { src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+                ]
+            });
+            
+        </script>
+
+    </body>
 </html>
